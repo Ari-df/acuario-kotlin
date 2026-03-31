@@ -1,5 +1,10 @@
 import acuario.Acuario
 import acuario.TanqueTorre
+import acuario.Pez
+import acuario.PezPayaso
+import acuario.Tiburon
+import acuario.Perro
+import acuario.Gato
 
 fun construirAcuario(){
     val acuario1= Acuario()
@@ -20,6 +25,26 @@ fun construirAcuario(){
     val miTorre = TanqueTorre(diametro=25,alto=40)
     miTorre.imprimirTamano()
 }
+fun crearPeces(){
+    val tiburon = Tiburon()
+    println("Color de Tiburon: ${tiburon.color}")
+    val pezPayaso = PezPayaso()
+    tiburon.comer()
+    println("Color de Pez Payaso: ${pezPayaso.color}")
+    pezPayaso.comer()
+}
+fun crearAnimales() {
+    val perro = Perro("Rex")
+    val gato = Gato("Luna")
+
+    println("${perro.nombre} es un ${perro.especie}")
+    perro.hacerSonido()
+
+    println("${gato.nombre} es un ${gato.especie}")
+    gato.hacerSonido()
+}
 fun main(){
-    construirAcuario()
+    //construirAcuario()
+    //crearPeces()
+    crearAnimales()
 }
